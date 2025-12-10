@@ -1,0 +1,26 @@
+# Configuration des providers de recherche
+# Les clés API doivent être dans le fichier .env
+
+providers:
+  serpapi:
+    enabled: false
+    api_key_env: "SERPAPI_KEY"
+    endpoint: "https://serpapi.com/search"
+  
+  bing:
+    enabled: false
+    api_key_env: "BING_API_KEY"
+    endpoint: "https://api.bing.microsoft.com/v7.0/search"
+  
+  duckduckgo:
+    enabled: true
+    # Pas besoin de clé API pour DuckDuckGo
+    endpoint: "https://html.duckduckgo.com/html/"
+
+# Paramètres de recherche par défaut
+search_params:
+  num_results: 50
+  date_range: "past_year"  # past_day, past_week, past_month, past_year
+  language: "fr"
+  country: "fr"
+
