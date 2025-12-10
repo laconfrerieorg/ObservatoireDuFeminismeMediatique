@@ -41,7 +41,6 @@ observatoire_medias/
 │   ├── reset_data.py           # Réinitialisation des données
 │   ├── audit_parsing.py        # Audit de qualité du parsing
 │   ├── test_sensitivity.py     # Tests de sensibilité des mots-clés
-│   ├── filter_franceculture.py # Filtrage des articles France Culture
 │   ├── filter_old_articles.py  # Filtrage des articles par date
 │   ├── remove_duplicates.py    # Suppression des doublons
 │   ├── statistical_tests.py    # Tests statistiques
@@ -286,4 +285,5 @@ Ce projet est modulaire et peut être étendu facilement :
 ## 📄 Licence
 
 Ce projet est fourni à des fins d'analyse et de recherche. Respectez les droits d'auteur et les conditions d'utilisation des sites web analysés.
+
 
