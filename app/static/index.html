@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatoire des médias – Narratif féministe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Observatoire des médias</h1>
+            <p class="subtitle">Analyse du narratif féministe dans les médias français</p>
+            <p class="last-update" id="lastUpdate">Chargement...</p>
+        </header>
+
+        <section class="summary" id="summarySection">
+            <h2>📊 Résumé global</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-label">Articles analysés</div>
+                    <div class="summary-value" id="totalArticles">-</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Total mots-clés féministes</div>
+                    <div class="summary-value" id="avgMilitant">-</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Médias analysés</div>
+                    <div class="summary-value" id="totalMedias">-</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts">
+            <div class="chart-container">
+                <h2>📈 Score ajusté par média (militantisme × confiance)</h2>
+                <p class="chart-description">Le score ajusté combine le pourcentage de militantisme avec un facteur de confiance basé sur le nombre d'articles collectés. Plus un média a d'articles, plus sa moyenne est fiable statistiquement.</p>
+                <canvas id="mediasChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>📊 Nombre d'articles par média</h2>
+                <canvas id="articlesChart"></canvas>
+            </div>
+
+            <div class="chart-container chart-container-large">
+                <h2>📅 Évolution temporelle du niveau de féminisme</h2>
+                <canvas id="timeChart"></canvas>
+            </div>
+
+        </section>
+
+        <section class="medias-details">
+            <h2>📊 Statistiques détaillées par média</h2>
+            <div class="table-container">
+                <table id="mediasDetailsTable">
+                    <thead>
+                        <tr>
+                            <th>Média</th>
+                            <th>N articles</th>
+                            <th>Score ajusté</th>
+                            <th>Militantisme moyen</th>
+                            <th>Confiance</th>
+                            <th>Médiane</th>
+                            <th>Écart-type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mediasDetailsBody">
+                        <tr>
+                            <td colspan="5">Chargement...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="top-articles">
+            <h2>🏆 Top 10 des articles avec le plus de mots-clés féministes</h2>
+            <div class="table-container">
+                <table id="topArticlesTable">
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Titre</th>
+                            <th>Média</th>
+                            <th>Date</th>
+                            <th>Mots-clés féministes</th>
+                            <th>Lien</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topArticlesBody">
+                        <tr>
+                            <td colspan="6">Chargement...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="all-articles">
+            <h2>📰 Tous les articles analysés</h2>
+            <p class="section-description">Liste complète de tous les articles organisés par média</p>
+            <div id="allArticlesContainer">
+                <div class="loading">Chargement...</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Observatoire des médias – Données mises à jour automatiquement</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
