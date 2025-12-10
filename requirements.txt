@@ -1,0 +1,31 @@
+# Observatoire des médias - Dépendances Python
+
+# Web scraping et parsing
+beautifulsoup4
+requests
+aiohttp
+lxml
+playwright
+
+# Recherche web
+ddgs
+
+# Traitement de données
+python-dateutil
+
+# Configuration
+pyyaml
+python-dotenv
+
+# API web
+flask
+flask-cors
+
+# Utilitaires
+pandas
+
+# Analyses statistiques
+scipy
+scikit-learn
+numpy
+
